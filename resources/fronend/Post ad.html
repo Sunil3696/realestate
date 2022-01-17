@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Post Ad</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <style type="text/css" media="screen">	
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #757575;
+    line-height: 32px;
+}
+.navbar-brand{
+	color: #000;
+	font-weight: 500;
+}
+.nav-link{
+	color: #000;
+	font-weight: 500;
+}
+.navbar-toggler-icon{
+	color: #000 !important;
+}
+.thm-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.contact-form-content {
+   background: #e6e8ef;
+    padding: 80px 0;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.thm-container .title {
+    margin-bottom: 50px;
+}
+
+.thm-container .title span {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #FF4328;
+}
+
+.thm-container .title h2 {
+    color: #212121;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 68px;
+    border-radius: 35px;
+    background: #fff;
+    color: #757575;
+    font-size: 16px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.contact-form textarea {
+    height: 182px;
+    padding-top: 20px;
+}
+
+.thm-btn {
+    border: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    background: #FEC931;
+    color: #212121;
+    border-radius: 35px;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 16px;
+    padding: 18px 69px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.contact-info {
+    margin-left: -30px;
+    border: 2px solid #EBEDF4;
+    padding-top: 75px;
+    padding-bottom: 80px;
+}
+
+.single-contact-info h4 {
+    color: #212121;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact-info .social a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 59px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+    display:inline-block;
+    font-family: FontAwesome;
+    margin:5px;
+}
+
+.contact-info .social a.fa-twitter {
+    background: #FEC931;
+}
+
+.contact-info .social a.fa-pinterest {
+    background: #212121;
+}
+
+.contact-info .social a.fa-facebook-f {
+    background: #2884C6;
+}
+
+.contact-info .social a.fa-youtube {
+    background: #FF4328;
+}
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+.waves-light:hover{
+      color: green !important;
+      background: #fff !important;
+      border-color: green !important;
+}
+</style>
+</head>
+<body>
+	                <!--   ***********************nav bar starts***************** -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link pr-5" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-5" href="#">Property for Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pr-5" href="#">Property for Sale</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search a Related property" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light m-1">Register</a>
+            </div>
+        </div>
+    </nav>
+                  <!--   ***********************nav bar ends***************** -->
+                  <!-- <*****************************Post ad form starts***************> -->
+    <div class="thm-container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="contact-form-content">
+                    <div class="title">
+                         <span>Contact with us</span>
+                         <h2>Post Your Ad Here.</h2>
+                    </div>
+                    <form action="inc/sendemail.php" class="contact-form" novalidate="novalidate">
+                     	 <input type="text" name="i-have" placeholder="I have Land/House">
+                     	 <input type="text" name="i-want" placeholder="I want to Sell/Rent">
+                         <input type="text" name="name" placeholder="Your full name">
+                         <input type="text" name="Address" placeholder="Your Address (City,Local place,)">
+                         <input type="text" name="Gender" placeholder="Gender">
+                         <input type="number" name="Phone Number" placeholder="Phone Number">
+                         <input type="text" name="email" placeholder="Your email address">
+                         <input type="text" name="Ad-title" placeholder="Ad Title (Eg:Well furnished three bed room apartment in Kumaripathi, Lalitpur)">
+                         <input type="text" name="Size" placeholder="Size of property (anna)">
+                         <input type="text" name="Location" placeholder="Location of Your Proporty">
+                         <input type="text" name="Price" placeholder="Price Range">
+                         <textarea name="message" placeholder="Discription of Porperty"></textarea>
+                         <button type="submit" class="thm-btn yellow-bg">Submit Now</button>
+                         <div class="form-result"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-info text-center">
+                    <div class="title text-center">
+                        <span>Contact info</span>
+                        <h2>Details</h2>
+                    </div>
+                    <div class="single-contact-info">
+                        <h4>Address</h4>
+                        <p>88 New Road, Kathmandu<br> Nepal, Asia</p>
+                    </div>
+                    <div class="single-contact-info">
+                        <h4>Phone</h4>
+                        <p>Local: 222 999 888 <br> Mobile: 0000 8888 99 0090</p>
+                    </div>
+                    <div class="single-contact-info">
+                        <h4>Email</h4>
+                        <p>needhelp@wooodd2.com <br> inquiry@woooodd2.com</p>
+                    </div>
+                    <div class="single-contact-info">
+                        <h4>Follow</h4>
+                        <div class="social">
+                            <a href="#" class="fab fa-twitter hvr-pulse"></a>  
+                            <a href="#" class="fab fa-pinterest hvr-pulse"></a>
+                            <a href="#" class="fab fa-facebook-f hvr-pulse"></a>
+                            <a href="#" class="fab fa-youtube hvr-pulse"></a>
+                        </div>
+                    </div>
+                    <!-- <************************file uploder starts******************> -->
+                    <div class="container py-5">
+                        <header class="text-dark text-center">
+                             <p class="lead mb-0">Upload the Image of your porperty</p>
+                             <img src="https://icons-for-free.com/iconfiles/png/512/cloud+upload+file+storage+upload+icon-1320190558968694328.png" alt="" width="150" class="mb-4">
+                        </header>
+                        <div class="row py-4">
+                            <div class="col-lg-12 mx-auto">
+                                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                                    <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                                    <div class="input-group-append">
+                                       <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                                    </div>
+                                </div>
+                                <p class="font-italic text-dark text-center">The image uploaded will be rendered inside the box below.</p>
+                                <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+                           </div>
+                        </div>
+                    </div><!-- <*****************************file uploader ends**************> -->
+                </div>
+            </div>
+        </div>
+    </div>
+           <!--  *******************post ad ends******************* --> 
+         <!-- <*****************************footer starts***************************> -->
+<footer class="page-footer font-small stylish-color-dark pt-4 bg-light">
+  <div class="container text-center text-md-left">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <h5 class="font-weight-500 text-uppercase mt-3 mb-4">Footer logo</h5>
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+      </div>
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-500 text-uppercase mt-3 mb-4">Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-500 text-uppercase mt-3 mb-4">Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-500 text-uppercase mt-3 mb-4">Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a href="#!" class="btn btn-danger btn-rounded waves-effect waves-light">Sign up!</a>
+      <a href="#!" class="btn btn-primary btn-rounded waves-effect waves-light">Log in!</a>
+    </li>
+  </ul>
+  <hr>
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <i class="fab fa-facebook-f"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1">
+        <i class="fab fa-instagram"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1">
+        <i class="fab fa-linkedin-in"> </i>
+      </a>
+    </li>
+  </ul>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#">RealEsate Company</a>
+  </div>
+</footer>
+
+<!--  <***********************************footer ends*********************> -->
+
+
+
+<script type="text/javascript">
+    	function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#imageResult')
+                .attr('src', e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$(function () {
+    $('#upload').on('change', function () {
+        readURL(input);
+    });
+});
+</script>
+<script type="text/javascript" charset="utf-8" async defer>
+var input = document.getElementById( 'upload' );
+var infoArea = document.getElementById( 'upload-label' );
+
+input.addEventListener( 'change', showFileName );
+function showFileName( event ) {
+  var input = event.srcElement;
+  var fileName = input.files[0].name;
+  infoArea.textContent = 'File name: ' + fileName;
+}
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
